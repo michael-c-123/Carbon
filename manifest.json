@@ -1,0 +1,22 @@
+{
+  "name": "Carbon",
+  "version": "1.0",
+  "description": "Amazon Sustainability Extension",
+  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "page_action": {
+    "default_icon": "images/carbon.png"
+  },
+  
+  "manifest_version": 2,
+  
+  "content_scripts": [
+    {
+      "matches": ["*://*.amazon.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
